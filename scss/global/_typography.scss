@@ -1,0 +1,74 @@
+@use "../util/" as u;
+
+@layer typography {
+  /* figtree-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 500;
+    src: url("./../../assets/fonts/figtree-v8-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* figtree-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 800;
+    src: url("./../../assets/fonts/figtree-v8-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  :root {
+    --fs-24: calc(24 / 16 * 1rem);
+    --fs-20: calc(20 / 16 * 1rem);
+    --fs-16: 1rem;
+    --fs-14: calc(14 / 16 * 1rem);
+    --fs-12: calc(12 / 16 * 1rem);
+
+    --font-size-h1: clamp(var(--fs-20), 0.554vw + 1.0845rem, var(--fs-24));
+    --font-size-p: clamp(var(--fs-14), 0.3878vw + 0.7091rem, var(--fs-16));
+
+    --font-default: "Figtree", sans-serif;
+  }
+
+  body {
+    font-family: var(--font-default);
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: var(--font-size-p);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+    text-wrap: balance;
+    line-height: normal;
+  }
+
+  h1,
+  .h1 {
+    font-size: var(--font-size-h1);
+    font-weight: 800;
+    color: var(--c-grey-950);
+  }
+
+  p {
+    max-inline-size: 50ch;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--c-grey-950);
+  }
+
+  .attribution {
+    font-weight: 400;
+  }
+}
