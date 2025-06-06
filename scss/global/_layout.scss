@@ -47,7 +47,7 @@
     &__image {
       margin-block-end: var(--spacing-200);
       border-radius: var(--br-10);
-      overflow: hidden;
+      overflow: clip;
       img {
         inline-size: 100%;
       }
